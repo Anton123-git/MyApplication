@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 
 class SecondActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -13,6 +14,12 @@ class SecondActivity : AppCompatActivity() {
         nextButton.setOnClickListener {
             val intent = Intent(this, NextActivity::class.java)
             startActivity(intent)
+        }
+
+        val nextButtonS = findViewById<AppCompatButton>(R.id.next_button4)
+        nextButtonS.setOnClickListener {
+            val intents = Intent(this, EndActivity::class.java)
+            startActivity(intents)
         }
     }
 }
