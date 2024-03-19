@@ -10,11 +10,11 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 
-@Suppress("DEPRECATION")
 class CreatActivity : AppCompatActivity() {
 
     private lateinit var checkBox: CheckBox
     private lateinit var nextButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creat)
@@ -31,7 +31,6 @@ class CreatActivity : AppCompatActivity() {
 
         textView.text = spannable
 
-
         checkBox = findViewById(R.id.ChekBox)
         nextButton = findViewById(R.id.next_buttonCreat)
 
@@ -41,20 +40,19 @@ class CreatActivity : AppCompatActivity() {
             nextButton.isEnabled = isChecked
             // Изменение цвета кнопки в зависимости от состояния чекбокса
             if (isChecked) {
-                nextButton.setBackgroundColor(resources.getColor(R.color.enabled_button_color))
+                nextButton.setBackgroundResource(R.drawable.rounded_button_blue)
             } else {
-                nextButton.setBackgroundColor(resources.getColor(R.color.disabled_button_color))
+                nextButton.setBackgroundResource(R.drawable.rounded_button_gray)
             }
-
         }
 
         // Устанавливаем кнопке начальное состояние в зависимости от состояния чекбокса
         nextButton.isEnabled = checkBox.isChecked
         // Устанавливаем начальный цвет кнопки в зависимости от начального состояния чекбокса
         if (checkBox.isChecked) {
-            nextButton.setBackgroundColor(resources.getColor(R.color.enabled_button_color))
+            nextButton.setBackgroundResource(R.drawable.rounded_button_blue)
         } else {
-            nextButton.setBackgroundColor(resources.getColor(R.color.disabled_button_color))
+            nextButton.setBackgroundResource(R.drawable.rounded_button_gray)
         }
     }
 }
