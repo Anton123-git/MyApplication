@@ -1,6 +1,5 @@
 package com.example.myapplication
-
-
+import CreatActivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +16,8 @@ class EndActivity : AppCompatActivity() {
         nextButtonE.setOnClickListener {
             val intentE = Intent(this, CreatActivity::class.java)
             startActivity(intentE)
+
+
         }
     }
 }
