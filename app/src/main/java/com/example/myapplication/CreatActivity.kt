@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -40,6 +41,15 @@ class CreatActivity : AppCompatActivity() {
         spannable.setSpan(ForegroundColorSpan(yellowColor), halfTextLength, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         textView.text = spannable
+
+
+        val textViewEnd = findViewById<TextView>(R.id.textViewCreat)
+        textViewEnd.setOnClickListener {
+            // Создаем Intent для перехода на LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            // Запускаем LoginActivity
+            startActivity(intent)
+        }
 
         checkBox = findViewById(R.id.ChekBox)
         nextButton = findViewById(R.id.next_buttonCreat)
