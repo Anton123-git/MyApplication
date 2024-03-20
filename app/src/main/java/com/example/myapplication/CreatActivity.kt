@@ -1,3 +1,4 @@
+package com.example.myapplication
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -10,7 +11,8 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
-import com.example.myapplication.R
+
+
 
 class CreatActivity : AppCompatActivity() {
 
